@@ -16,7 +16,7 @@ int input_redirecting(int count, char **arglist);
 int output_redirecting_appending(int count, char **arglist);
 
 int prepare(void) {
-    // After prepare() finishes the patent should not terminate upon SIGINT.
+    // After prepare() finishes the process should not terminate upon SIGINT.
     if (signal(SIGINT, SIG_IGN) == SIG_ERR) {
         perror("Error - failed to change signal SIGINT handling");
         return -1;
