@@ -229,7 +229,6 @@ int input_redirecting(int count, char **arglist) {
 }
 
 int output_redirecting_appending(int count, char **arglist) {
-    /*execute the command so that the standard output is redirected to the output file*/
     arglist[count - 2] = NULL;
     pid_t pid = fork();
     if (pid == -1) { /*fork failed*/
